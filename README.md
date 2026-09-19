@@ -13,14 +13,16 @@
 
 تم نقل المصدر المحلي المحفوظ بعد استعادة نسخة 15 سبتمبر 2026، من commit `f0153b9`. لم يتضمن النقل تعديل التصميم أو الخطوط. تعذر التحقق المباشر من النسخة الحية عبر اتصال Cloudflare خلال النقل.
 
-## ربط النشر التلقائي
+## حالة ربط Cloudflare
 
-الملفات موجودة في GitHub. الربط التلقائي مع Cloudflare يحتاج تفعيله من لوحة Cloudflare مرة واحدة:
+المستودع مرتبط بعامل Cloudflare الموجود `omar-wedding-2026`. بعد رفع ملفات الموقع إلى فرع `main`، شغّل تطبيق `cloudflare-workers-and-pages` عملية البناء تلقائيًا وأعاد نتيجة نجاح.
 
-1. افتح Workers & Pages واختر العامل الموجود `omar-wedding-2026`.
-2. اختر Settings ثم Builds ثم Connect.
-3. اربط حساب GitHub واختر `omaralblack-pixel/ORSY-OMAR-`.
-4. استخدم الإعدادات التالية:
+- Commit نقل الملفات: `55fff6b5d4ddb6c5e6f6117eefa238016cbb46d6`
+- فحص GitHub: `Workers Builds: omar-wedding-2026` — `success`
+- Cloudflare Version ID: `592cdd0a-0023-4a98-8876-c195d8d6cf0a`
+- [تفاصيل البناء الناجح](https://dash.cloudflare.com/676d7985e74569dc7b03dd0575fb07dd/workers/services/view/omar-wedding-2026/production/builds/259da0d7-ea6e-48fd-b22b-5a30b2998fe1)
+
+يمكن مراجعة إعدادات الربط من Workers & Pages → omar-wedding-2026 → Settings → Builds. إعدادات المشروع المناسبة:
 
 | الإعداد | القيمة |
 | --- | --- |
@@ -29,7 +31,7 @@
 | Build command | اتركه فارغًا؛ الملفات جاهزة في dist |
 | Deploy command | `npx wrangler@4 deploy` |
 
-بعد تفعيل الربط، التغييرات على فرع `main` تنشر تلقائيًا إلى العامل نفسه. تعديل إعدادات النشر يتم في `wrangler.jsonc`، وتعديل الدعوة داخل `dist/index.html`.
+الربط يتابع تغييرات فرع `main` لبناء الموقع على العامل نفسه. حالة البناء والتحقق من الإصدار الحي متاحان في لوحة Cloudflare. تعديل إعدادات النشر يتم في `wrangler.jsonc`، وتعديل الدعوة داخل `dist/index.html`.
 
 لا تحفظ رموز API أو مفاتيح الوصول داخل ملفات المستودع.
 

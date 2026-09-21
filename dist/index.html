@@ -87,7 +87,7 @@
         <div class="timeline">
           <div class="event"><span class="time">05:30 مساءً</span><strong>الفاردة من بيت العريس</strong></div>
           <div class="event"><span class="time">06:00 مساءً</span><strong>بداية الحفل</strong><small>لحظة ننتظرها بكل شوق</small></div>
-          <div class="event"><span class="time">08:30 مساءً</span><strong>نهاية الحفل</strong></div>
+          <div class="event"><span class="time">08:00 مساءً</span><strong>نهاية الحفل</strong></div>
         </div>
         <div class="rules">
           <div class="rule">يُمنع استخدام الهواتف نهائيًا في قاعة النساء.</div>
@@ -120,7 +120,7 @@
     document.getElementById('skipJourney').addEventListener('click',reachPalace);
     document.getElementById('discover').addEventListener('click',()=>{reveal.classList.remove('show');invitation.classList.add('show');footer.hidden=false;document.body.style.overflow='auto';invitation.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
     const wedding=new Date('2026-10-06T18:00:00+03:00');function tick(){const left=Math.max(0,wedding-Date.now()),values=[Math.floor(left/864e5),Math.floor(left/36e5)%24,Math.floor(left/6e4)%60,Math.floor(left/1e3)%60];['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'));}tick();setInterval(tick,1000);
-    document.getElementById('calendarLink').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('حفل زفاف عمر وكريمته')+'&dates=20261006T150000Z/20261006T173000Z&location='+encodeURIComponent('صالات سجى الليل، أوتوستراد الزرقاء')+'&details='+encodeURIComponent('الفاردة من بيت العريس الساعة 05:30 مساءً، بداية الحفل في صالات سجى الليل الساعة 06:00 مساءً، نهاية الحفل الساعة 08:30 مساءً.');
+    document.getElementById('calendarLink').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('حفل زفاف عمر وكريمته')+'&dates=20261006T150000Z/20261006T170000Z&location='+encodeURIComponent('صالات سجى الليل، أوتوستراد الزرقاء')+'&details='+encodeURIComponent('الفاردة من بيت العريس الساعة 05:30 مساءً، بداية الحفل في صالات سجى الليل الساعة 06:00 مساءً، نهاية الحفل الساعة 08:00 مساءً.');
   </script>
 </body>
 </html>
